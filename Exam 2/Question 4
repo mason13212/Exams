@@ -31,3 +31,5 @@ def jump_hurdle(): #Code to jump hurdle
    
 while not at_goal(): #While its not at the goal, jump those hurdles!
     jump_hurdle()
+
+# HI MR SLATER. >:)
