@@ -1,1 +1,33 @@
+def turn_right(): #Turns right (Left x3)
+    repeat 3:
+        turn_left()
 
+def jump_hurdle(): #Code to jump hurdle
+    while front_is_clear(): #Moves to hurdle
+        move()
+        if at_goal():
+            done()
+    turn_left() #Turns to go up
+    if at_goal():
+        done()
+    while not right_is_clear(): #moves up hurdle
+        move()
+    if at_goal():
+        done()
+    turn_right() #Turns at top of hurdle
+    if at_goal():
+        done()
+    move() #moves across
+    if at_goal():
+        done()
+    turn_right() #turns to go down
+    if at_goal():
+        done()
+    while front_is_clear(): #moves down
+        move()
+    if at_goal(): 
+        done()
+    turn_left() #Turns left for next hurdle
+   
+while not at_goal(): #While its not at the goal, jump those hurdles!
+    jump_hurdle()
